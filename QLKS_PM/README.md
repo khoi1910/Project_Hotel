@@ -1,4 +1,4 @@
-# Đồ án cơ sở dữ liệu
+# Phần mềm quản lý khách sạn
 
 **1. Mô tả**
 
