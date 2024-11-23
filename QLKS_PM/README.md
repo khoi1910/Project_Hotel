@@ -23,7 +23,7 @@
 
 <h4 align="center">Đăng nhập</h4>
 
-![UI-Login](img/dangnhap.png.png)
+![UI-Login](img/dangnhap.png)
 
 ---
 
