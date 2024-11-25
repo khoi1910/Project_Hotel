@@ -59,6 +59,6 @@
 
 <h4 align="center">Báo cáo/Thống kê</h4>
 
-![UI-Report](img/baocao.png)
+![UI-Report](QLKS_PM/img/baocao.png)
 
 <h4 align="center">...</h4>
