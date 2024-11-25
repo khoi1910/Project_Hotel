@@ -29,31 +29,31 @@
 
 <h4 align="center">Đăng ký tài khoản</h4>
 
-![UI-Register](img/dangky.png)
+![UI-Register](QLKS_PM/img/dangky.png)
 
 ---
 
 <h4 align="center">Trang chủ</h4>
 
-![UI-Main](img/main.png)
+![UI-Main](QLKS_PM/img/main.png)
 
 ---
 
 <h4 align="center">Quản lý nhân viên</h4>
 
-![UI-Employee](img/Quanlynhanvien.png)
+![UI-Employee](QLKS_PM/img/Quanlynhanvien.png)
 
 ---
 
 <h4 align="center">Quản lý khách hàng</h4>
 
-![UI-Customer](img/Quanlykhachhang.png)
+![UI-Customer](QLKS_PM/img/Quanlykhachhang.png)
 
 ---
 
 <h4 align="center">Quản lý phòng</h4>
 
-![UI-Room](img/Quanlyphong.png)
+![UI-Room](QLKS_PM/img/Quanlyphong.png)
 
 ---
 
