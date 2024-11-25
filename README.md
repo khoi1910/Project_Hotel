@@ -16,7 +16,7 @@
 
 **2. Cài đặt**
 
-- Cài jdk 11, NeatBeans IDE, SQL Server
+- Cài jdk 22, NeatBeans IDE, SQL Server
 - Cài đặt cơ sở dữ liệu với file **.sql** trong folder **/database**
 
 **3. Giao diện chính**
