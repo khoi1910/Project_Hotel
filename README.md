@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:README.md
+<<<<<<<< HEAD:README.md
+=======
+>>>>>>> 4d00b2172765b51c6ff90f8dfc2ad55b3ec2f8f1
 # Phần mềm quản lý khách sạn
 
 **1. Mô tả**
@@ -63,6 +67,12 @@
 ![UI-Report](QLKS_PM/img/baocao.png)
 
 <h4 align="center">...</h4>
+<<<<<<< HEAD
 ========
 
 >>>>>>>> 4d00b2172765b51c6ff90f8dfc2ad55b3ec2f8f1:QLKS_PM/README.md
+========
+
+>>>>>>>> 4d00b2172765b51c6ff90f8dfc2ad55b3ec2f8f1:QLKS_PM/README.md
+=======
+>>>>>>> 4d00b2172765b51c6ff90f8dfc2ad55b3ec2f8f1
