@@ -247,11 +247,11 @@ BEGIN
 END;
 GO
   -- Thêm nhân viên:
-EXEC dbo.addNhanVien @maNV = 'bibo', @tenNV = 'Nguyen Cong Binh', @date = '3/8/2001', @sex = 'Nam', @cv = 1, @cmt = '001201007344', @sdt = '0971912776'
+EXEC dbo.addNhanVien @maNV = 'vb', @tenNV = 'Bui Trong Vu', @date = '12/04/2004', @sex = 'Nam', @cv = 1, @cmt = '001201007344', @sdt = '0365127404'
 GO
-EXEC dbo.addNhanVien @maNV = 'ts', @tenNV = 'Nguyen Tung Son', @date = '3/8/2001', @sex = 'Nam', @cv = 1, @cmt = '091201207343', @sdt = '0818696268'
+EXEC dbo.addNhanVien @maNV = 'mk', @tenNV = 'Minh Khoi', @date = '3/8/2004', @sex = 'Nam', @cv = 1, @cmt = '091201207343', @sdt = '0818696268'
 GO
-EXEC dbo.addNhanVien @maNV = 'bth', @tenNV = 'Bui Thi Hanh', @date = '4/3/2001', @sex = 'Nu', @cv = 1, @cmt = '011201207544', @sdt = '0343066599'
+EXEC dbo.addNhanVien @maNV = 'th', @tenNV = 'Bui Thi Hanh', @date = '4/3/2004', @sex = 'Nu', @cv = 1, @cmt = '011201207544', @sdt = '0343066599'
 GO
 DECLARE @chucVu INT;
 SET @chucVu=1;
@@ -350,13 +350,11 @@ END
 GO
 -- Ví dụ thêm tài khoản nhân viên
 INSERT INTO dbo.tbl_taikhoan(maNV,taiKhoan,matKhau)VALUES
-('bibo','binhboong','1');
+('vb','vubui096','1234');
 go
 INSERT INTO dbo.tbl_taikhoan(maNV,taiKhoan,matKhau)VALUES
-('ts','sontung123','123');
+('mk','minhkhoi123','123');
 GO
-INSERT INTO dbo.tbl_taikhoan(maNV,taiKhoan,matKhau)VALUES
-('bth','hanhbui123','123456');
 GO
 SELECT * FROM dbo.tbl_taikhoan
 GO
@@ -408,31 +406,7 @@ GO
 -- Ví dụ kiểm tra đăng nhập
 EXECUTE dbo.checkLogin @user='binhboong',@pass='1';
 GO
--- trigger thay đổi mã Nhân viên
---CREATE TRIGGER changeMaNV ON dbo.tbl_nhanvien INSTEAD OF UPDATE
---AS
---BEGIN
---	DECLARE @sMaNV VARCHAR(30);
---	DECLARE @sMaNVTemple VARCHAR(30);
---	DECLARE @sMaNVUpdate VARCHAR(30);
---	SET @sMaNVTemple = 'templatewww';
---	SELECT @sMaNV =  (SELECT DISTINCT Deleted.maNV FROM Deleted);
---	SELECT @sMaNVUpdate = (SELECT DISTINCT Inserted.maNV FROM Inserted);
 
---	INSERT INTO dbo.tbl_nhanvien (maNV) VALUES (@sMaNVTemple);
---	UPDATE dbo.tbl_taikhoan SET maNV =  @sMaNVTemple WHERE maNV IN (@sMaNV); 
---	UPDATE dbo.tbl_datphong SET maNV = @sMaNVTemple WHERE maNV IN(@sMaNV);
-
---	UPDATE dbo.tbl_nhanvien SET maNV = @sMaNVUpdate WHERE maNV IN (@sMaNV);
---	UPDATE dbo.tbl_taikhoan SET maNV = @sMaNVUpdate WHERE maNV IN (@sMaNVTemple);
---	UPDATE dbo.tbl_datphong SET maNV = @sMaNVUpdate WHERE maNV IN(@sMaNVTemple);
-
---	DELETE FROM dbo.tbl_nhanvien WHERE maNV IN (@sMaNVTemple);
---END
---GO
---DROP TRIGGER dbo.changeMaNV;
---GO
--- proc them loai phong
 CREATE PROC addLoaiPhong(@maLP VARCHAR(10), @moTa VARCHAR(30), @gia MONEY)
 AS
 BEGIN
@@ -535,13 +509,13 @@ BEGIN
 END
 GO
 -- Thêm khách hàng
-EXEC dbo.addKhachHang @maKH = 'kh01', @tenKH = 'Bui Minh Tuan', @date = '3/2/2001', @sex = 'Nam', @cmt = '031412507344', @sdt = '0375912776'
+EXEC dbo.addKhachHang @maKH = 'kh01', @tenKH = 'Bui Minh Tuan', @date = '3/2/2004', @sex = 'Nam', @cmt = '031412507344', @sdt = '0375912776'
 GO
-EXEC dbo.addKhachHang @maKH = 'kh02', @tenKH = 'Nguyen Quang Nam', @date = '2/1/2001', @sex = 'Nam', @cmt = '021412507344', @sdt = '0373612776'
+EXEC dbo.addKhachHang @maKH = 'kh02', @tenKH = 'Nguyen Quang Nam', @date = '2/1/2004', @sex = 'Nam', @cmt = '021412507344', @sdt = '0373612776'
 GO
-EXEC dbo.addKhachHang @maKH = 'kh03', @tenKH = 'Bui Minh Anh', @date = '10/2/2001', @sex = 'Nam', @cmt = '031412507374', @sdt = '0975912776'
+EXEC dbo.addKhachHang @maKH = 'kh03', @tenKH = 'Bui Minh Anh', @date = '10/2/2004', @sex = 'Nam', @cmt = '031412507374', @sdt = '0975912776'
 GO
-EXEC dbo.addKhachHang @maKH = 'kh04', @tenKH = 'Bui Thi Cam Nhung', @date = '11/12/2001', @sex = 'Nu', @cmt = '032412507444', @sdt = '0905912776'
+EXEC dbo.addKhachHang @maKH = 'kh04', @tenKH = 'Bui Thi Cam Nhung', @date = '11/12/2004', @sex = 'Nu', @cmt = '032412507444', @sdt = '0905912776'
 GO
 CREATE PROC updateKhachHang(@maKH VARCHAR(30), @tenKH VARCHAR(50), @date DATE,
 @sex VARCHAR(5), @cmt VARCHAR(12), @sdt VARCHAR(11))
